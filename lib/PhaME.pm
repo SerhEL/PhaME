@@ -145,7 +145,8 @@ sub prepareComplete {
     my $file = shift;
     my $name = shift;
     my $sequence;
-    $name =~ s/\W/_/g;
+    # $name =~ s/\W/_/g;
+    $name =~ s/[^\w\-]/_/g;
 
     #print "$name\t$wdir/files/$name.fna\n";
     `mkdir -p $wdir/files`;
@@ -174,7 +175,8 @@ sub prepareContig {
     my ( $header, @seq );
     my $sequence;
     my $count = 1;
-    $name =~ s/\W/_/g;
+    # $name =~ s/\W/_/g;
+    $name =~ s/[^\w\-]/_/g;
     my $contig     = $name . '_contig';
     my $outfile    = $dir . '/files/' . $name . '_contig.fna';
     my $total_size = 0;
