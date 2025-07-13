@@ -173,10 +173,10 @@ if ( $coding == 1 ) {
 }
 
 print "Creating SNP stats file. \n";
-create_stats();
-create_core_stats();
-create_comparison();
-create_matrix();
+# create_stats();
+# create_core_stats();
+# create_comparison();
+# create_matrix();
 
 print "SNP alignment complete.\n";
 
